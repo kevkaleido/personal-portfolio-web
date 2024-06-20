@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>K's Cooking Survey Form</title>
+      <link rel="stylesheet" href="style.css"/>
+   </head>
+   <body>
+      <div id="heading">
+         <h1 id="title">K's Cooking Survey Form</h1>
+         <p id="description">Thanks for taking a break from burning toast to help us improve our platform!!</p>
+      </div>
+      <div id="main">
+         <form id="survey-form">
+            <div id="input-fields">
+               <label id="name-label"><b>Name:</b></label>
+               <input id="name" type="name" name="name" class="form" required placeholder="Full Name" /><br />
+               <br />
+               <label id="email-label"><b>Email:</b></label>
+               <input id="email" type="email" name="email" class="form" required placeholder="example@mail.com" /><br />
+               <br />
+               <label id="number-label"><b>Age:</b></label>
+               <input id="number" type="number" name="number" class="form" min="12" max="99" placeholder="+12" />
+            </div>
+            <div id="dropdown-div">
+               <br />
+               <label id="dropdown-label"><strong>Which cuisine are you most experienced in?</strong></label><br />
+               <select id="dropdown" name="cuisine" class="form">
+                  <option value="Nigerian">Nigerian</option>
+                  <option value="Chinese">Chinese</option>
+                  <option value="Indian">Indian</option>
+                  <option value="Mexican">Mexican</option>
+                  <option value="French">French</option>
+                  <option value="Japanese">Japanese</option>
+                  <option value="Mediterranean">Mediterranean</option>
+                  <option value="American">American</option>
+                  <option value="Other">Other</option>
+               </select>
+            </div>
+            <div id="button-area">
+               <br />
+               <label id="job-label"><b>Cooking Experience:</b></label><br />
+               <input type="radio" class="radio-inline" name="experience" value="beginner" checked /> Beginner<br />
+               <input type="radio" class="radio-inline" name="experience" value="intermediate" /> Intermediate<br />
+               <input type="radio" class="radio-inline" name="experience" value="advanced" /> Advanced<br />
+               <input type="radio" class="radio-inline" name="experience" value="professional" /> Professional<br />
+            </div>
+
+            <div id="button-area">
+               <br />
+               <label id="os-label"><b>Which appliances do you use regularly?</b></label><br />
+               <input type="checkbox" name="appliance1" value="oven" checked /> Oven<br />
+               <input type="checkbox" name="appliance2" value="stove" /> Stove<br />
+               <input type="checkbox" name="appliance3" value="microwave" /> Microwave<br />
+               <input type="checkbox" name="appliance4" value="blender" /> Blender<br />
+               <input type="checkbox" name="appliance5" value="airfryer" /> Air Fryer<br />
+            </div>
+
+            <div id="dropdown">
+               <br />
+               <br />
+               <label id="dropdown-label"><strong>Which cuisine would you like to learn more about?</strong></label><br />
+               <select id="dropdown" name="learn-cuisine" class="form">
+                  <br />
+                  <br />
+                  <option value="Italian">Italian</option>
+                  <option value="Chinese">Chinese</option>
+                  <option value="Indian">Indian</option>
+                  <option value="Mexican">Mexican</option>
+                  <option value="French">French</option>
+                  <option value="Japanese">Japanese</option>
+                  <option value="Mediterranean">Mediterranean</option>
+                  <option value="American">American</option>
+                  <option value="Other">Other</option>
+               </select>
+            </div>
+            <div id="button-area">
+               <br />
+               <br />
+               <label id="os-label"><b>Which cooking techniques are you familiar with?</b></label><br />
+               <input type="checkbox" name="tech1" value="baking" /> Baking<br />
+               <input type="checkbox" name="tech2" value="grilling" /> Grilling<br />
+               <input type="checkbox" name="tech3" value="sauteing" /> Sautéing<br />
+               <input type="checkbox" name="tech4" value="roasting" /> Roasting<br />
+               <input type="checkbox" name="tech5" value="steaming" /> Steaming<br />
+            </div>
+
+            <div id="ending">
+               <br />
+               <br />
+               <label id="comments-label">Do you have any suggestions about this survey?</label><br />
+               <textarea style="height: 120px;" class="form" placeholder="Please feel free to write a review..."></textarea><br />
+               <br />
+               <input id="submit" type="submit" class="form" />
+            </div>
+         </form>
+      </div>
+   </body>
+   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
