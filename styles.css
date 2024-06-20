@@ -106,8 +106,9 @@ section h2 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(25, 85, 95, 0.2);
     transition: background-color 0.3s;
-    width: calc(33.333% - 2rem);
+    width: calc(33.333% - 1.5rem);
     box-sizing: border-box;
+    
 }
 
 .project:hover {
@@ -130,11 +131,22 @@ a {
   }
 
 footer {
-    text-align: center;
+    text-align: left;
     padding: 1rem 0;
-    background-color: #1e1e1e;
+    background-color: #ea3e3e;
+    border-radius: 10px;
     color: #f4f4f4;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin-left: auto;
+    margin-right: 1%;
+    padding-left: 100px;
+    opacity: 0.9;
+
+}
+
+
+    
 }
 
 @media (max-width: 768px) {
