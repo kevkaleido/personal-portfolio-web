@@ -1,3 +1,5 @@
+/* Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -54,13 +56,17 @@ nav ul li a:hover {
 }
 
 #about h2{
-    color: aliceblue;}
+    color: aliceblue;
+}
 
 #projects h2{
-    color: aliceblue;}
+    color: aliceblue;
+}
 
 #contact h2{
-    color: aliceblue;}
+    color: aliceblue;
+}
+
 section {
     width: 80%;
     max-width: 900px;
@@ -88,16 +94,12 @@ section h2 {
     display: inline-block;
 }
 
-
-
-.project-grid{
+.project-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
 }
-
-
 
 .project {
     background-color: #242424;
@@ -106,9 +108,8 @@ section h2 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(25, 85, 95, 0.2);
     transition: background-color 0.3s;
-    width: calc(33.333% - 1.5rem);
+    width: calc(33.333% - 2rem);
     box-sizing: border-box;
-    
 }
 
 .project:hover {
@@ -124,42 +125,82 @@ section h2 {
     font-size: 1rem;
     line-height: 1.4;
 }
+
 a {
     color: #ea3e3e;
     text-decoration: none;
-
-  }
+}
 
 footer {
-    text-align: left;
+    text-align: center;
     padding: 1rem 0;
-    background-color: #ea3e3e;
-    border-radius: 10px;
+    background-color: #1e1e1e;
     color: #f4f4f4;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    width: 70%;
-    margin-left: auto;
-    margin-right: 1%;
-    padding-left: 100px;
-    opacity: 0.9;
-
+    border-radius: 10px;
 }
 
+/* Media Queries */
 
-    
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        gap: 1rem;
-        padding: 20px;
+/* Tablets (portrait and landscape) */
+@media (max-width: 1024px) {
+    header {
+        width: 90%;
+        margin-left: 5%;
     }
-
+    
     section {
+        width: 90%;
         padding: 1.5rem;
     }
+    
+    .project {
+        width: calc(50% - 2rem);
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    nav ul li a {
+        font-size: 1rem;
+    }
+}
 
+/* Mobile devices */
+@media (max-width: 768px) {
+    header {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+    
+    section {
+        width: 95%;
+        padding: 1rem;
+    }
+    
     .project {
         width: calc(100% - 2rem);
+    }
+    
+    nav ul {
+        /* flex-direction: column; */
+        gap: 0.5rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .project h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project p {
+        font-size: 0.9rem;
     }
 }
