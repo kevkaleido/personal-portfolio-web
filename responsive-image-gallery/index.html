@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="filter-buttons">
+        <button data-filter="all" data-color="gray">All</button>
+        <button data-filter="red" data-color="rgb(209, 52, 52, 0.9)">Red</button>
+        <button data-filter="green" data-color="rgb(36, 106, 36, 0.9)">Green</button>
+        <button data-filter="blue" data-color="rgb(0, 93, 187, 0.9)">Blue</button>
+    </div>
+
+    <div class="gallery">
+        <img src="https://images.pexels.com/photos/938580/pexels-photo-938580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="red" alt="red Image 1">
+        <img src="https://images.pexels.com/photos/749114/pexels-photo-749114.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="green" alt="green Image 1">
+        <img src="https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="blue" alt="blue Image 1">
+        <img src="https://images.pexels.com/photos/2055592/pexels-photo-2055592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="red" alt="red Image 2">
+        <img src="https://images.pexels.com/photos/62289/yemen-chameleon-chamaeleo-calyptratus-chameleon-reptile-62289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="green" alt="green Image 2">
+        <img src="https://images.pexels.com/photos/1176618/pexels-photo-1176618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="blue" alt="blue Image 2">
+        <img src="https://images.pexels.com/photos/131811/pexels-photo-131811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="red" alt="red Image 1">
+        <img src="https://images.pexels.com/photos/747079/pexels-photo-747079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="blue" alt="blue Image 3">
+        <img src="https://images.pexels.com/photos/91216/pexels-photo-91216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="blue" alt="blue Image 4">
+        <img src="https://cdn.pixabay.com/photo/2018/01/28/08/12/nature-3112997_1280.jpg" data-category="red" alt="red Image 3">
+        <img src="https://images.pexels.com/photos/792416/pexels-photo-792416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="blue" alt="blue Image 6">
+        <img src="https://images.pexels.com/photos/1535907/pexels-photo-1535907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="green" alt="green Image 4">
+        <img src="https://cdn.pixabay.com/photo/2022/11/29/19/10/poppy-7625142_1280.jpg" data-category="red" alt="red Image 6">
+        <img src="https://images.pexels.com/photos/923022/pexels-photo-923022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-category="blue" alt="blue Image 5">
+        <img src="https://cdn.pixabay.com/photo/2023/08/07/08/35/broccoli-8174625_1280.jpg" data-category="green" alt="green Image 5">
+        <img src="https://cdn.pixabay.com/photo/2023/05/24/18/32/ladybug-8015502_1280.jpg" data-category="red" alt="red Image 4">
+        <img src="https://cdn.pixabay.com/photo/2020/02/02/15/07/wine-4813260_1280.jpg" data-category="red" alt="red Image 5">
+        <img src="https://cdn.pixabay.com/photo/2012/12/14/11/36/leaves-69999_1280.jpg" data-category="green" alt="green Image 3">
+        <img src="https://cdn.pixabay.com/photo/2016/11/08/04/49/jungle-1807476_1280.jpg" data-category="green" alt="green Image 6">
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <footer id="footer">
+        <p><a href="kelvinkalumba189@gmail.com">Contact</a></p>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

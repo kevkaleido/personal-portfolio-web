@@ -1,0 +1,1 @@
+This responsive image gallery project demonstrates how I combine HTML, CSS, and JavaScript to create an interactive and visually appealing web page. The filter buttons allow users to view images by category(Red, Green, Blue), and the lightbox feature enhances the user experience by enabling larger views of the images with easy navigation.
