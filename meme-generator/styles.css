@@ -13,14 +13,34 @@ form {
 }
 
 input, select, button {
-    display: block;
+    display: bl;
     margin: 10px auto;
     padding: 10px;
     font-size: 16px;
+    border-radius: 5px;
 }
 
 #memeContainer {
     margin-top: 20px;
+
+}
+
+#shareButtons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#shareButtons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#shareButtons img {
+    width: 20px;
+    height: 20px;
 }
 
 #memeContainer img {
@@ -28,3 +48,29 @@ input, select, button {
     height: auto;
     border-radius: 10px;
 }
+
+#downloadButton {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#downloadButton:hover {
+    background: linear-gradient(135deg, #a777e3, #6e8efb);
+    transform: translateY(-2px);
+}
+
+#downloadButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+

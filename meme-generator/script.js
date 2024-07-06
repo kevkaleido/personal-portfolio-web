@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const templateSelect = document.getElementById("templateSelect");
     const memeForm = document.getElementById("memeForm");
     const memeContainer = document.getElementById("memeContainer");
+    const shareButtons = document.getElementById("shareButtons");
 
     // Fetch meme templates from Imgflip API
     fetch("https://api.imgflip.com/get_memes")
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <img src="${memeUrl}" alt="Generated Meme">
                         <button id="downloadButton">Download Meme</button>
                     `;
+                    shareButtons.style.display = "flex";
 
                     const downloadButton = document.getElementById("downloadButton");
                     downloadButton.addEventListener("click", () => {
@@ -51,6 +53,18 @@ document.addEventListener("DOMContentLoaded", () => {
                         link.download = "meme.png";
                         link.click();
                     });
+
+                    document.getElementById("shareFacebook").onclick = () => {
+                        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(memeUrl)}`, '_blank');
+                    };
+
+                    document.getElementById("shareTwitter").onclick = () => {
+                        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(memeUrl)}`, '_blank');
+                    };
+
+                    document.getElementById("shareReddit").onclick = () => {
+                        window.open(`https://www.reddit.com/submit?url=${encodeURIComponent(memeUrl)}`, '_blank');
+                    };
                 } else {
                     memeContainer.innerHTML = `<p>Failed to generate meme: ${data.error_message}</p>`;
                 }
