@@ -1,76 +1,206 @@
 body {
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff6ec4 25%, #7873f5 75%);
+    color: #fff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 h1 {
-    margin-top: 20px;
+    font-size: 3em;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px #000;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 4px #ff00ff;
+    }
+    to {
+        text-shadow: 2px 2px 20px #ff00ff;
+    }
 }
 
 form {
-    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #000;
+    display: inline-block;
+    margin: 20px auto;
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    max-width: 600px;
 }
 
-input, select, button {
-    display: block;
-    margin: 10px auto;
+form select, form input, form button {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: 2px solid #333;
     padding: 10px;
-    font-size: 16px;
+    margin: 10px 0;
     border-radius: 5px;
+    font-size: 1.2em;
+    width: calc(100% - 22px);
+    box-shadow: 0 0 10px #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+form button {
+    cursor: pointer;
+    background: #ff00ff;
+    color: #fff;
+    border: 2px solid #ff00ff;
+}
+
+form button:hover {
+    background: #00ffff;
+    border-color: #00ffff;
+    color: #000;
 }
 
 #memeContainer {
     margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #000;
+    background: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    max-width: 800px;
+}
 
+#memeContainer img {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 20px #000;
 }
 
 #shareButtons {
+    margin: 20px;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 50px;
 }
 
 #shareButtons button {
     background: none;
     border: none;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-#shareButtons img {
+#shareButtons button img {
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 10px #000;
+    border-radius: 50%;
+}
+
+#shareButtons button:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #000;
+}
+
+/* Adding animated floating particles */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: float 5s ease-in-out infinite;
+}
+
+.particle:nth-child(2) {
+    background: rgba(255, 105, 180, 0.6);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+    animation-duration: 7s;
+}
+
+.particle:nth-child(3) {
+    background: rgba(135, 206, 250, 0.6);
+    box-shadow: 0 0 10px rgba(135, 206, 250, 0.8);
+    animation-duration: 9s;
+}
+
+.particle:nth-child(4) {
+    background: rgba(255, 182, 193, 0.6);
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.8);
+    animation-duration: 11s;
+}
+
+/* Adding particles to the body */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body::after > div {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    opacity: 0.6;
+}
+
+body::after > div:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    top: 10%;
+    left: 20%;
+    animation: float 7s ease-in-out infinite;
+}
+
+body::after > div:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    top: 40%;
+    left: 80%;
+    background: rgba(255, 105, 180, 0.6);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+    animation: float 9s ease-in-out infinite;
+}
+
+body::after > div:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    top: 60%;
+    left: 30%;
+    background: rgba(135, 206, 250, 0.6);
+    box-shadow: 0 0 10px rgba(135, 206, 250, 0.8);
+    animation: float 11s ease-in-out infinite;
+}
+
+body::after > div:nth-child(4) {
     width: 20px;
     height: 20px;
+    top: 70%;
+    left: 50%;
+    background: rgba(255, 182, 193, 0.6);
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.8);
+    animation: float 13s ease-in-out infinite;
 }
-
-#memeContainer img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-}
-
-#downloadButton {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-    border: none;
-    border-radius: 25px;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 20px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#downloadButton:hover {
-    background: linear-gradient(135deg, #a777e3, #6e8efb);
-    transform: translateY(-2px);
-}
-
-#downloadButton:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
