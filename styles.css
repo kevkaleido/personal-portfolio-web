@@ -57,7 +57,7 @@ section {
 }
 
 h1, h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
     animation: text-fade 6s infinite alternate;
