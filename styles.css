@@ -1,9 +1,11 @@
 body {
-    background: radial-gradient(circle, #1a1a1d, #1c1b21, #1e1a25, #20192b, #231831);
+    background: linear-gradient(120deg, #1a1a1d, #1c1b21, #1e1a25, #20192b, #231831);
     color: #ffffff;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
     overflow-x: hidden;
+    perspective: 1000px;
+    perspective-origin: center;
 }
 
 @keyframes starfield {
@@ -11,11 +13,25 @@ body {
     100% { background-position: 10000px 10000px, 2000px 2000px, 1000px 1000px; }
 }
 
+@keyframes neon-pulse {
+    0% {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+    }
+    50% {
+        text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff, 0 0 60px #00ffff;
+    }
+    100% {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+    }
+}
+
 header {
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     box-shadow: 0 0 20px #a0f;
     position: relative;
+    animation: neon-pulse 3s infinite;
+    transform: rotateY(10deg) skewY(-5deg);
 }
 
 nav ul {
@@ -24,12 +40,15 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    backdrop-filter: blur(5px);
+    transform: rotateY(-10deg);
 }
 
 nav ul li {
     margin: 0 15px;
     position: relative;
-    z-index: 1;
+    z-index: 11;
+    transform: skewX(10deg);
 }
 
 nav ul li a {
@@ -39,6 +58,7 @@ nav ul li a {
     font-size: 1.5em;
     text-shadow: 0 0 10px #ff00ff;
     transition: transform 0.3s ease, color 0.3s ease;
+    animation: neon-pulse 2s infinite;
 }
 
 nav ul li a:hover {
@@ -50,6 +70,9 @@ nav ul li a:hover {
 h1, h2, h3 {
     text-shadow: 0 0 20px #ff00ff;
     margin: 20px 0;
+    letter-spacing: 3px;
+    animation: neon-pulse 5s infinite;
+    transform: skewY(5deg);
 }
 
 #home {
@@ -57,6 +80,12 @@ h1, h2, h3 {
     padding: 20px;
     position: relative;
     z-index: 1;
+    animation: glow 5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #ff00ff; }
+    100% { text-shadow: 0 0 20px #00ffff; }
 }
 
 #projects {
@@ -69,6 +98,12 @@ h1, h2, h3 {
     overflow: hidden;
     position: relative;
     z-index: 1;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .project-grid {
@@ -77,17 +112,17 @@ h1, h2, h3 {
     gap: 20px;
 }
 
-.project-grid a{
+.project-grid a {
     color: #990000;
     text-decoration: none;
     text-shadow: 0 0 10px #ff00ff;
     position: relative;
     z-index: 1;
+    transform: rotateX(10deg);
 }
 
 .project-grid a:hover {
     color: #e92828;
-   
 }
 
 .project {
@@ -138,6 +173,8 @@ footer {
     box-shadow: 0 0 20px #a0f;
     position: relative;
     z-index: 1;
+    backdrop-filter: blur(10px);
+    transform: rotateY(-10deg);
 }
 
 footer a {
@@ -151,7 +188,6 @@ footer a:hover {
     text-shadow: 0 0 20px #00ffff;
 }
 
-/* Adding a starfield animation */
 body::before {
     content: '';
     position: fixed;
@@ -168,17 +204,10 @@ body::before {
     z-index: -1;
 }
 
-/* Adding animated floating particles */
 @keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
 }
 
 .particle {
@@ -208,7 +237,6 @@ body::before {
     animation-duration: 11s;
 }
 
-/* Adding particles to the body */
 body::after {
     content: '';
     position: fixed;
@@ -264,4 +292,22 @@ body::after > div:nth-child(4) {
     background: rgba(255, 0, 255, 0.8);
     box-shadow: 0 0 10px #ff00ff;
     animation: float 13s ease-in-out infinite;
+}
+
+/* Additional glowing particle effect */
+.particle-glow {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(255, 0, 255, 0.8), rgba(0, 255, 255, 0.8));
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8);
+    animation: float 8s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+body::after > div:nth-child(5) {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 70%;
+    animation: float 15s ease-in-out infinite;
 }
