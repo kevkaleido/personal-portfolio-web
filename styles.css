@@ -1,31 +1,29 @@
 body {
-    background: radial-gradient(circle, #1f1c2c, #928dab);
-    font-family: 'Montserrat', sans-serif;
-    color: #e4e5e6;
-    text-shadow: 1px 1px 2px #000;
-    animation: gradient-animation 15s infinite alternate;
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    animation: bg-glow 10s infinite alternate;
 }
 
-@keyframes gradient-animation {
+@keyframes bg-glow {
     0% {
-        background: radial-gradient(circle, #1f1c2c, #928dab);
+        background: linear-gradient(135deg, #1d2b64, #f8cdda);
     }
     50% {
-        background: radial-gradient(circle, #355c7d, #6c5b7b, #c06c84);
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
     }
     100% {
-        background: radial-gradient(circle, #1f1c2c, #928dab);
+        background: linear-gradient(135deg, #1d2b64, #f8cdda);
     }
 }
 
 header {
-    background: rgba(31, 28, 44, 0.8);
+    background: rgba(29, 43, 100, 0.8);
     padding: 15px;
-    border-bottom: 2px solid #c06c84;
-    box-shadow: 0 0 20px #c06c84;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    border-bottom: 3px solid #f8cdda;
+    box-shadow: 0 0 25px #f8cdda;
+    backdrop-filter: blur(5px);
 }
 
 nav ul {
@@ -37,90 +35,99 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #e4e5e6;
+    color: #f8cdda;
     font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
+    font-variant: small-caps;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #c06c84;
-    transform: scale(1.1);
+    color: #6a11cb;
+    transform: translateY(-5px);
 }
 
 section {
-    padding: 40px 20px;
-    margin: 20px 0;
-    border: 2px solid #6c5b7b;
-    border-radius: 20px;
+    padding: 30px 20px;
+    margin: 20px;
+    border: 2px solid #2575fc;
+    border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 15px #6c5b7b;
+    box-shadow: 0 0 20px #2575fc;
+    backdrop-filter: blur(10px);
 }
 
 h1, h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
-    animation: text-fade 6s infinite alternate;
+    animation: pulse 5s infinite alternate;
 }
 
-@keyframes text-fade {
+@keyframes pulse {
     0% {
-        opacity: 1;
+        transform: scale(1);
+        color: #f8cdda;
     }
     50% {
-        opacity: 0.5;
+        transform: scale(1.1);
+        color: #2575fc;
     }
     100% {
-        opacity: 1;
+        transform: scale(1);
+        color: #6a11cb;
     }
 }
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    gap: 20px;
 }
 
 .project {
-    background: rgba(31, 28, 44, 0.8);
-    border: 2px solid #c06c84;
-    border-radius: 20px;
-    padding: 20px;
+    background: rgba(29, 43, 100, 0.8);
+    border: 2px solid #f8cdda;
+    border-radius: 15px;
+    padding: 15px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
 .project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px #c06c84;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #f8cdda;
 }
 
 .project a {
-    color: #e4e5e6;
+    color: #f8cdda;
     text-decoration: none;
     font-weight: bold;
+    font-variant: small-caps;
 }
 
 .project a:hover {
-    color: #c06c84;
-    text-shadow: 0 0 5px #c06c84;
+    color: #6a11cb;
+    text-shadow: 0 0 5px #6a11cb;
 }
 
 footer {
-    background: rgba(31, 28, 44, 0.8);
-    padding: 25px;
+    background: rgba(29, 43, 100, 0.8);
+    padding: 20px;
     text-align: center;
-    border-top: 2px solid #c06c84;
-    box-shadow: 0 0 20px #c06c84;
+    border-top: 3px solid #f8cdda;
+    box-shadow: 0 0 25px #f8cdda;
+    backdrop-filter: blur(5px);
 }
 
 footer a {
-    color: #e4e5e6;
+    color: #f8cdda;
     text-decoration: none;
     font-weight: bold;
+    font-variant: small-caps;
 }
 
 footer a:hover {
-    color: #c06c84;
-    text-shadow: 0 0 5px #c06c84;
+    color: #6a11cb;
+    text-shadow: 0 0 5px #6a11cb;
 }
