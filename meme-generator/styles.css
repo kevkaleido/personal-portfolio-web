@@ -1,7 +1,7 @@
 body {
-    background: linear-gradient(135deg, #00bfff 25%, #1e90ff 75%);
+    background: linear-gradient(135deg, #ff6ec4 25%, #7873f5 75%);
     color: #fff;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -11,24 +11,24 @@ body {
 h1 {
     font-size: 3em;
     margin: 20px 0;
-    text-shadow: 2px 2px 4px #000080;
+    text-shadow: 2px 2px 4px #000;
     animation: glow 1.5s infinite alternate;
 }
 
 @keyframes glow {
     from {
-        text-shadow: 2px 2px 4px #4169e1;
+        text-shadow: 2px 2px 4px #ff00ff;
     }
     to {
-        text-shadow: 2px 2px 20px #4169e1;
+        text-shadow: 2px 2px 20px #ff00ff;
     }
 }
 
 form {
-    background: rgba(0, 0, 128, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 20px #000080;
+    box-shadow: 0 0 20px #000;
     display: inline-block;
     margin: 20px auto;
     position: relative;
@@ -38,37 +38,37 @@ form {
 }
 
 form select, form input, form button {
-    background: rgba(255, 255, 255, 0.9);
-    color: #000080;
-    border: 2px solid #4169e1;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: 2px solid #333;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
     font-size: 1.2em;
     width: calc(100% - 22px);
-    box-shadow: 0 0 10px #87cefa;
+    box-shadow: 0 0 10px #fff;
     transition: all 0.3s ease-in-out;
 }
 
 form button {
     cursor: pointer;
-    background: #4169e1;
+    background: #ff00ff;
     color: #fff;
-    border: 2px solid #4169e1;
+    border: 2px solid #ff00ff;
 }
 
 form button:hover {
-    background: #00bfff;
-    border-color: #00bfff;
-    color: #000080;
+    background: #00ffff;
+    border-color: #00ffff;
+    color: #000;
 }
 
 #memeContainer {
     margin-top: 20px;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 30px #000080;
-    background: rgba(0, 0, 128, 0.8);
+    box-shadow: 0 0 30px #000;
+    background: rgba(0, 0, 0, 0.8);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -79,7 +79,7 @@ form button:hover {
 #memeContainer img {
     max-width: 100%;
     border-radius: 4px;
-    box-shadow: 0 0 20px #4169e1;
+    box-shadow: 0 0 20px #000;
 }
 
 #shareButtons {
@@ -99,47 +99,16 @@ form button:hover {
 #shareButtons button img {
     width: 30px;
     height: 30px;
-    box-shadow: 0 0 10px #4169e1;
+    box-shadow: 0 0 10px #000;
     border-radius: 50%;
 }
 
 #shareButtons button:hover img {
     transform: scale(1.1);
-    box-shadow: 0 0 20px #87cefa;
+    box-shadow: 0 0 20px #000;
 }
 
-/* Animated floating particles */
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-.particle {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(135, 206, 250, 0.6);
-    box-shadow: 0 0 10px rgba(135, 206, 250, 0.8);
-    animation: float 5s ease-in-out infinite;
-}
-
-.particle:nth-child(2) {
-    background: rgba(0, 191, 255, 0.6);
-    box-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-    animation-duration: 7s;
-}
-
-.particle:nth-child(3) {
-    background: rgba(30, 144, 255, 0.6);
-    box-shadow: 0 0 10px rgba(30, 144, 255, 0.8);
-    animation-duration: 9s;
-}
-
-.particle:nth-child(4) {
-    background: rgba(65, 105, 225, 0.6);
-    box-shadow: 0 0 10px rgba(65, 105, 225, 0.8);
-    animation-duration: 11s;
-}
+/* Existing animations and particle styles... */
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
